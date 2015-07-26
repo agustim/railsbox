@@ -85,3 +85,47 @@ All kind of contributions are always welcomed.
 [vim-sensible]: https://github.com/tpope/vim-sensible
 [vim-rails]: https://github.com/tpope/vim-rails
 [MIT license]: LICENSE
+
+
+# Setup Debian system.
+
+## [VirtualBox on Debian](https://wiki.debian.org/VirtualBox):
+* Active "contrib" component in ``/etc/apt/sources.list`
+```
+# Debian 8 "Jessie"
+deb http://http.debian.net/debian/ jessie main contrib
+```
+* Update
+```
+apt-get update
+```
+* Install
+```
+apt-get install linux-headers-$(uname -r|sed 's,[^-]*-[^-]*-,,') virtualbox
+```
+
+## [Vagrant from debian's repositories](https://packages.debian.org/jessie/vagrant)
+* Install
+```
+apt-get install vagrant
+```
+
+[Vagrant](http://www.vagrantup.com/downloads)
+* Download .DEB of 32bits or 64bits.
+* Install
+```
+dpkg -i vagrant-\*.deb
+```
+## [Ansible on debian]()
+
+```
+$ sudo apt-get update
+$ sudo apt-get install python-pip python-dev git -y
+$ sudo pip install PyYAML jinja2 paramiko
+$ git clone https://github.com/ansible/ansible.git
+$ cd ansible
+$ git pull --rebase
+$ git submodule update --init --recursive
+$ sudo make install
+
+```

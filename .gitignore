@@ -22,3 +22,5 @@ coverage
 
 spec/fixtures/testapp1/railsbox
 
+railsbox/*
+
